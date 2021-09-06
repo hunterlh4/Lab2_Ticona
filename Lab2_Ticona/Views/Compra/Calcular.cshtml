@@ -1,0 +1,52 @@
+﻿@model Lab2_Ticona.Models.ClsCompra
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Calcular</title>
+</head>
+<body>
+    <div> 
+
+        <h1> <center>Compra de productos </center>  </h1>
+        <br />
+        <div>
+            @if (Model.valoraleatorio < 100)
+            {
+                Model.total = Model.monto = (Model.monto * 0.3);
+                Model.descuento = (Model.monto * 0.3);
+            }
+            else if (Model.valoraleatorio >= 100 && Model.valoraleatorio < 250) {
+                Model.total = Model.monto = (Model.monto * 0.5);
+                Model.descuento = (Model.monto * 0.5);
+            }
+            else if (Model.valoraleatorio > 400 && Model.valoraleatorio <=500 )
+            {
+                Model.total = Model.monto = (Model.monto * 0.8);
+                Model.descuento = (Model.monto * 0.8);
+            }
+
+        </div>
+        <div>
+
+            Valor Random : @Model.valoraleatorio <br /><br />
+            Monto Total : @Model.monto <br />
+            Descuento : @Model.descuento <br /><br />
+            <b> Total a cancelar : @Model.total </b>
+        </div>
+        <div>
+          <a href="Index">Retornar al formulario</a>
+
+            
+        </div>
+
+    </div>
+
+  
+</body>
+</html>

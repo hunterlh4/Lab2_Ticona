@@ -1,0 +1,30 @@
+﻿@model Lab2_Ticona.Models.ClsOperaciones
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Calcular</title>
+</head>
+<body>
+    <div>
+        <h1>Operaciones Aritmeticas</h1>
+
+        <br />
+        <label>Numero 1: </label> @Model.numero1 <br />
+        <label>Numero 2: </label> @Model.numero2 <br />
+        <br />
+        <label>Tipo de operacion: </label> @Model.tipo <br />
+        <br />
+        <label>Resultado: </label> @Model.resultado <br />
+                                                    <br />
+        @Html.ActionLink("<<Retornar al formulario","/Index")
+    <br />
+    <a href="Index">Retornar</a>
+    </div>
+</body>
+</html>

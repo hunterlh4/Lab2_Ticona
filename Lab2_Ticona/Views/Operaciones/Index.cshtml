@@ -1,0 +1,38 @@
+﻿@model Lab2_Ticona.Models.ClsCompra
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1><center><b>Operaciones Aritmeticas</b></center></h1>
+
+        <br />
+        <form name=" frmoperaciones" action="Calcular" method="post">
+            <label> Numero 1 : </label>
+            <input type="text" name="n1" />
+            <br />
+            <label> Numero 2 : </label>
+            <input type="text" name="n2" />
+            <br />
+            <select name="operacion">
+                <option value="Suma"> Suma </option>
+                <option value="Resta"> Resta </option>
+                <option value="Multiplicacion"> Multiplicacion </option>
+                <option value="Dividir"> Dividir </option>
+            </select>
+            <br /> <br />
+            <input type="submit" value="calcular" />
+            <input type="reset" value="cancelar" />
+            <br />
+        </form>
+    </div>
+</body>
+</html>
